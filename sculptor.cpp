@@ -12,7 +12,7 @@ void Sculptor::setColor(float r, float g, float b, float alpha)
     this -> g = g;
     this -> b = b;
     this -> alpha = alpha;
-
+    //pronto
 }
 
 void Sculptor::putVoxel(int x, int y, int z)
@@ -21,9 +21,10 @@ void Sculptor::putVoxel(int x, int y, int z)
     v[x][y][z].g = g;
     v[x][y][z].b = b;
     v[x][y][z].alpha = alpha;
-
+    
     isOn = true;
 
+    //a fazer
 }
 
 void Sculptor::cutVoxel(int x, int y, int z)
@@ -35,7 +36,7 @@ void Sculptor::cutVoxel(int x, int y, int z)
 
     isOn = false;
 
-
+    //a fazer
 }
 
 void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
