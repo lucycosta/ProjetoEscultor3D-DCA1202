@@ -1,1 +1,2 @@
-# ProjetoEscultor3D-DCA1202
+# Discentes: Kaíque Gomes Machado
+#            Marlucy Barbosa Costa
