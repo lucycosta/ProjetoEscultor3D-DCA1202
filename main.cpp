@@ -77,4 +77,16 @@ cout<<"Entre com o raio"<<endl;
 cin>>radius;
 
 desenho.putSphere(xcenter, ycenter, zcenter, radius);
+
+//remoção de uma esfera
+cout<<"Entre com o centro em x da esfera"<<endl;
+cin>>xcenter;
+cout<<"Entre com o centro em y da esfera"<<endl;
+cin>>ycenter;
+cout<<"Entre com o centro em z da esfera"<<endl;
+cin>>zcenter;
+cout<<"Entre com o raio"<<endl;
+cin>>radius;
+
+desenho.cutSphere(xcenter, ycenter, zcenter, radius);
 }
