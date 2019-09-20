@@ -8,10 +8,8 @@ struct Voxel {
 };
 
 class Sculptor {
-
 protected:
-  Voxel ***v;
-  // 3D matrix
+  Voxel ***v; // 3D matrix
   int nx,ny,nz; // Dimensions
   float r,g,b,a; // Current drawing color
 
@@ -28,7 +26,6 @@ public:
   void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
   void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
   void writeOFF(char* filename);
-
 };
 
 #endif // SCULPTOR_H
