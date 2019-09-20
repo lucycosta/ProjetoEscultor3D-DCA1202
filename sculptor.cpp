@@ -1,8 +1,13 @@
 #include <Sculptor.h>
 
-Sculptor::Sculptor()
+Sculptor::Sculptor(int _nx, int _ny, int _nz)
 {
 
+
+}
+
+~Sculptor(){
+    
 
 }
 
