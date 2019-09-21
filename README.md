@@ -1,6 +1,6 @@
 Programação Avançada DCA1202 UFRN
 
-Discentes: Kaíque Gomes Machado
+Discentes: Kaíque Gomes Machado e
            Marlucy Barbosa Costa
 
 
