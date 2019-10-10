@@ -5,6 +5,40 @@
 
 using namespace std;
 
+   /*Sistema numérico na seleção do tipo de escultura sendo reaizada
+   * t = 1: preencher posição;
+   * t = 2: apagar posição;
+   * t = 3: preencher retangulo;
+   * t = 4: apagar retangulo;
+   * t = 5: preencher esfera;
+   * t = 6: apagar esfera;
+   * t = 7: preencher elipsoide;
+   * t = 8: apagar elipsoide;
+   */ 
+
+void FiguraGeometrica :: draw(Sculptor &t)
+{
+    if(t==1){
+    }
+    else if(t==2){
+    }
+    else if(t==3){
+    }
+    else if(t==4){
+    }
+    else if(t==5){
+    }
+    else if(t==6){
+    }
+    else if(t==7){
+    }
+    else if(t==8){
+    }
+    else{
+        cout>>"inválido!">>endl;
+    }
+}
+
 Sculptor::Sculptor(int _nx, int _ny, int _nz)
 {
    nx=_nx; ny=_ny; nz=_nz; //inicia as dimensoes da matriz 3D
@@ -51,12 +85,21 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
    }
 }
 
+// a variável booleana isOn indicará se a posição está ou não preenchida
+
 Sculptor::~Sculptor()
 {
     delete [] v[0][0];
     delete [] v[0];
     delete [] v;
 }
+
+/*Na próxima etapa vamos setar as cores da escultura.
+* r(red) representa o vermelho,
+* g(green) representa o verde,
+* b(blue) representa o azul,
+* e alpha representa o nível de transparência.
+*/
 
 void Sculptor::setColor(float r, float g, float b, float alpha)
 {
@@ -276,3 +319,4 @@ void Sculptor::writeOFF(char* filename)
         cout << "arquivo OFF salvo"<<endl;
     }
 }
+
