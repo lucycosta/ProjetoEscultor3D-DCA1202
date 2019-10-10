@@ -18,25 +18,7 @@ using namespace std;
 
 void FiguraGeometrica :: draw(Sculptor &t)
 {
-    if(t==1){
-    }
-    else if(t==2){
-    }
-    else if(t==3){
-    }
-    else if(t==4){
-    }
-    else if(t==5){
-    }
-    else if(t==6){
-    }
-    else if(t==7){
-    }
-    else if(t==8){
-    }
-    else{
-        cout>>"inválido!">>endl;
-    }
+
 }
 
 Sculptor::Sculptor(int _nx, int _ny, int _nz)
