@@ -49,7 +49,6 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
            }
        }
    }
-
 }
 
 Sculptor::~Sculptor()
@@ -69,9 +68,7 @@ void Sculptor::setColor(float r, float g, float b, float alpha)
         this -> g = g;
         this -> b = b;
         a = alpha;
-
     }
-
 }
 
 void Sculptor::putVoxel(int x, int y, int z)
@@ -86,7 +83,6 @@ void Sculptor::putVoxel(int x, int y, int z)
         v[x][y][z].b = b;
         v[x][y][z].a = a;
     }
-
 }
 
 void Sculptor::cutVoxel(int x, int y, int z)
@@ -97,8 +93,6 @@ void Sculptor::cutVoxel(int x, int y, int z)
     else{
       v[x][y][z].isOn = false;
     }
-
-
 }
 
 void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
@@ -108,19 +102,17 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
     }
     else{
         for (int i = x0; i<=x1; i++){
-                for (int j = y0; j<=y1; j++){
-                    for (int k = z0; k<=z1; k++){
-                        v[i][j][k].isOn = true;
-                        v[i][j][k].r = r;
-                        v[i][j][k].g = g;
-                        v[i][j][k].b = b;
-                        v[i][j][k].a = a;
-                    }
+            for (int j = y0; j<=y1; j++){
+                for (int k = z0; k<=z1; k++){
+                    v[i][j][k].isOn = true;
+                    v[i][j][k].r = r;
+                    v[i][j][k].g = g;
+                    v[i][j][k].b = b;
+                    v[i][j][k].a = a;
                 }
             }
+        }
     }
-
-
 }
 
 void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
@@ -130,19 +122,17 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
     }
     else{
         for (int i = x0; i<=x1; i++){
-                for (int j = y0; j<=y1; j++){
-                    for (int k = z0; k<=z1; k++){
-                        v[i][j][k].isOn = false;
-                        v[i][j][k].r = r;
-                        v[i][j][k].g = g;
-                        v[i][j][k].b = b;
-                        v[i][j][k].a = a;
-                    }
+            for (int j = y0; j<=y1; j++){
+                for (int k = z0; k<=z1; k++){
+                    v[i][j][k].isOn = false;
+                    v[i][j][k].r = r;
+                    v[i][j][k].g = g;
+                    v[i][j][k].b = b;
+                    v[i][j][k].a = a;
                 }
             }
+        }
     }
-
-
 }
 
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
@@ -160,22 +150,19 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
             }
         }
     }
-
 }
-
 
 void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
     for(int i = xcenter-radius; i<nx; i++){
         for(int j = ycenter-radius; j<ny; j++){
             for(int k = zcenter-radius; k<nz; k++){
-              if(((i-xcenter)*(i-xcenter) + (j-ycenter)*(j-ycenter) + (k-zcenter)*(k-zcenter))<= (radius*radius)){
-                  v[i][j][k].isOn = false;
-             }
-          }
-      }
-  }
-
+                if(((i-xcenter)*(i-xcenter) + (j-ycenter)*(j-ycenter) + (k-zcenter)*(k-zcenter))<= (radius*radius)){
+                    v[i][j][k].isOn = false;
+                }
+            }
+        }
+    }
 }
 
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
@@ -192,12 +179,10 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
                         v[i][j][k].b = b;
                         v[i][j][k].a = a;
                         v[i][j][k].isOn = true;
-
                 }
             }
         }
     }
-
 }
 
 void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
@@ -209,9 +194,7 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
             for(int k = zcenter-rz; k<=zcenter+rz; k++)
             {
                if((((float)((i-xcenter)*(i-xcenter))/(float)(rx*rx))+((float)((j-ycenter)*(j-ycenter))/(float)(ry*ry))+((float)((k-zcenter)*(k-zcenter))/(float)(rz*rz)))<=1.0){
-
                         v[i][j][k].isOn = false;
-
                 }
             }
         }
@@ -224,6 +207,7 @@ void Sculptor::writeOFF(char* filename)
     int Nvertices=0;
     int Nfaces=0;
     int aux=0;
+
     fout.open(filename);
 
     if(fout.is_open()){
@@ -291,8 +275,4 @@ void Sculptor::writeOFF(char* filename)
     if(fout.is_open()){
         cout << "arquivo OFF salvo"<<endl;
     }
-
-
-
 }
-
