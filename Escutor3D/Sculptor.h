@@ -30,7 +30,7 @@ public:
 
 public abstract class FiguraGeometrica
 {
-    public Sculptor t; //t será o tipo de forma que será adicionada ou destruída
+    FiguraGeometrica(); //t será o tipo de forma que será adicionada ou destruída
     public abstract void draw(Sculptor &t);
 }
 
