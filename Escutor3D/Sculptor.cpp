@@ -5,22 +5,6 @@
 
 using namespace std;
 
-   /*Sistema numérico na seleção do tipo de escultura sendo reaizada
-   * t = 1: preencher posição;
-   * t = 2: apagar posição;
-   * t = 3: preencher retangulo;
-   * t = 4: apagar retangulo;
-   * t = 5: preencher esfera;
-   * t = 6: apagar esfera;
-   * t = 7: preencher elipsoide;
-   * t = 8: apagar elipsoide;
-   */ 
-
-void FiguraGeometrica :: draw(Sculptor &t)
-{
-
-}
-
 Sculptor::Sculptor(int _nx, int _ny, int _nz)
 {
    nx=_nx; ny=_ny; nz=_nz; //inicia as dimensoes da matriz 3D
@@ -225,6 +209,10 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
         }
     }
 }
+
+
+void FiguraGeometrica::draw(Sculptor &t)
+{ }
 
 void Sculptor::writeOFF(char* filename)
 {
